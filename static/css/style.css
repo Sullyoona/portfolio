@@ -69,7 +69,8 @@ body {
 
 .nav-link li a.active {
     color: #F59E0B;
-    background: rgba(245, 158, 11, 0.12);
+    background: rgba(245, 158, 11, 0.2);
+    font-weight: 600;
 }
 
 /* ── HERO ── */

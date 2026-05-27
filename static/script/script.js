@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.remove('active');
             if (link.getAttribute('href') === targetId) {
                 link.classList.add('active');
+                console.log('Active nav updated to:', targetId);
             }
         });
     }
