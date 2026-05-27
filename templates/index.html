@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurt Ramirez — Portfolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="static/images/logo_favicon.png">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="static/images/logo_dark.png" alt="Kurt Ramirez logo">
+
+        <nav class="nav-bar">
+            <ul class="nav-link">
+                <li><a href="#hero" class="nav-link-item active">Home</a></li>
+                <li><a href="#gallery" class="nav-link-item">Gallery</a></li>
+                <li><a href="#about" class="nav-link-item">About</a></li>
+                <li><a href="#contact" class="nav-link-item">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- HERO / HOME SECTION -->
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <section id="hero" class="hero">
+            <div class="hero-text">
+                <p class="hero-eyebrow">BSIT Student · PLV</p>
+                <h1 class="hero-name">
+                    Richard Kurt<br>
+                    <em>Ramirez</em>
+                </h1>
+                <p class="hero-bio">
+                    An aspiring IT professional with a passion for software development,
+                    problem-solving, and building thoughtful digital experiences.
+                </p>
+                <div class="hero-actions">
+                    <a href="static/files/resume.pdf" download class="btn btn-primary">
+                        Download Resume
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        About Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Coding</h3>
+                    <p class="skill-label">Languages</p>
+                    <p>Java, C#, JavaScript, Python</p>
+                    <p class="skill-label">Web</p>
+                    <p>HTML5, CSS3, Tailwind, PHP, Flask, ASP.NET</p>
+                    <p class="skill-label">Database</p>
+                    <p>T-SQL, MySQL, SQLite, SSMS</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Design</h3>
+                    <p class="skill-label">UI/UX</p>
+                    <p>Figma</p>
+                    <p class="skill-label">Graphic</p>
+                    <p>Photoshop, Illustrator, Aseprite, Canva</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p class="skill-label">Version Control</p>
+                    <p>Git, GitHub</p>
+                    <p class="skill-label">Dev Environments</p>
+                    <p>VS Code, Visual Studio, XAMPP, MS SQL Server</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Other</h3>
+                    <p class="skill-label">Development</p>
+                    <p>Cross-Platform, RESTful API Design</p>
+                    <p class="skill-label">Productivity</p>
+                    <p>Microsoft Office, Google Workspace</p>
+                    <p class="skill-label">Docs</p>
+                    <p>Technical Documentation, README Authoring</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- RECENT WORKS SECTION -->
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <section class="recent-works">
+            <h2>Recent Works</h2>
+
+            <div class="works-grid">
+                <div class="work-item">
+                    <img src="static/images/illustratorProject1.jpg" alt="Geometric drawing made in Illustrator">
+                </div>
+                <div class="work-item">
+                    <img src="static/images/illustratorProject2.jpg" alt="Typographic drawing made in Illustrator">
+                </div>
+                <div class="work-item">
+                    <img src="static/images/illustratorProject3.jpg" alt="Pointilism drawing made in Illustrator">
+                </div>
+            </div>
+
+            <a href="#gallery" class="btn btn-outline">
+                See all works →
+            </a>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- GALLERY SECTION -->
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <section id="gallery" class="gallery-section">
+            <div class="gallery-header">
+                <p class="gallery-eyebrow">My Works</p>
+                <h1 class="gallery-heading">Gallery</h1>
+
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="illustration">Illustration</button>
+                    <button class="filter-btn" data-filter="print">Print Design</button>
+                    <button class="filter-btn" data-filter="pixel">Pixel Art</button>
+                    <button class="filter-btn" data-filter="motion">Motion</button>
+                    <button class="filter-btn" data-filter="development">Development</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <article class="gallery-item" data-category="illustration" data-featured="true">
+                    <a href="#img1">
+                        <img class="gallery-img" src="static/images/illustratorProject1.jpg" alt="Geometric drawing made in Illustrator">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Geometric Drawing</h3>
+                        <p class="gallery-meta">Illustration &middot; Adobe Illustrator</p>
+                        <p class="gallery-description">A geometric abstract composition showcasing shapes and patterns.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="illustration">
+                    <a href="#img2">
+                        <img class="gallery-img" src="static/images/illustratorProject2.jpg" alt="Typographic drawing made in Illustrator">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Typographic Drawing</h3>
+                        <p class="gallery-meta">Illustration &middot; Adobe Illustrator</p>
+                        <p class="gallery-description">Creative typography with decorative elements and artistic lettering.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="illustration">
+                    <a href="#img3">
+                        <img class="gallery-img" src="static/images/illustratorProject3.jpg" alt="Pointilism drawing made in Illustrator">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Pointilism Drawing</h3>
+                        <p class="gallery-meta">Illustration &middot; Adobe Illustrator</p>
+                        <p class="gallery-description">Pointillist technique creating images through colored dots and marks.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="illustration">
+                    <a href="#img4">
+                        <img class="gallery-img" src="static/images/illustratorProject4.jpg" alt="Tattoo drawing made in Illustrator">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Tattoo Drawing</h3>
+                        <p class="gallery-meta">Illustration &middot; Adobe Illustrator</p>
+                        <p class="gallery-description">Custom tattoo design combining traditional and modern styles.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="pixel" data-featured="true">
+                    <a href="#img5">
+                        <img class="gallery-img" src="static/images/How To Play-Sheet.png" alt="Pixel art sheet made in Aseprite">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Pixel Art Sheet</h3>
+                        <p class="gallery-meta">Pixel Art &middot; Aseprite</p>
+                        <p class="gallery-description">Sprite sheet for game characters and animation frames.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="pixel">
+                    <a href="#img6">
+                        <img class="gallery-img" src="static/images/Map_Floor5.png" alt="Pixel map made in Aseprite">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Pixel Map</h3>
+                        <p class="gallery-meta">Pixel Art &middot; Aseprite</p>
+                        <p class="gallery-description">Tileset design for game environment and level creation.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="print" data-featured="true">
+                    <a href="#img7">
+                        <img class="gallery-img" src="static/images/Ramirez_Book_Cover_Activity.jpg" alt="Book cover mock up made in Photoshop">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Book Cover Mock Up</h3>
+                        <p class="gallery-meta">Print Design &middot; Adobe Photoshop</p>
+                        <p class="gallery-description">Professional book cover design with typography and imagery.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="print">
+                    <a href="#img8">
+                        <img class="gallery-img" src="static/images/Ramirez_Grunge.jpg" alt="Call for action poster made in Photoshop">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Call for Action Poster</h3>
+                        <p class="gallery-meta">Print Design &middot; Adobe Photoshop</p>
+                        <p class="gallery-description">High-impact poster design with bold graphics and compelling messaging.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="print">
+                    <a href="#img9">
+                        <img class="gallery-img" src="static/images/Ramirez_Minimalist.jpg" alt="Concert poster mock up made in Photoshop">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Concert Poster Mock Up</h3>
+                        <p class="gallery-meta">Print Design &middot; Adobe Photoshop</p>
+                        <p class="gallery-description">Event promotion poster with minimalist design principles.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="motion" data-featured="true">
+                    <img class="gallery-img" src="static/videos/Ramirez-car-Act1.gif" alt="Car motion graphics made in Adobe Animate">
+                    <div class="gallery-info">
+                        <h3>Car Motion Graphics</h3>
+                        <p class="gallery-meta">Motion &middot; Adobe Animate</p>
+                        <p class="gallery-description">Dynamic animation showcasing vehicle movement and visual effects.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="motion">
+                    <img class="gallery-img" src="static/videos/text-animation-act4-5.gif" alt="Twice motion graphics made in Adobe Animate">
+                    <div class="gallery-info">
+                        <h3>Twice Motion Graphics</h3>
+                        <p class="gallery-meta">Motion &middot; Adobe Animate</p>
+                        <p class="gallery-description">Animated sequence with choreographed motion and transitions.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="motion">
+                    <img class="gallery-img" src="static/videos/text-animation-act4-4.gif" alt="Text motion graphics made in Adobe Animate">
+                    <div class="gallery-info">
+                        <h3>Text Motion Graphics</h3>
+                        <p class="gallery-meta">Motion &middot; Adobe Animate</p>
+                        <p class="gallery-description">Text animation with kinetic typography and visual effects.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="development" data-featured="true">
+                    <a href="#dev1">
+                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Web-Based Customer Satisfaction Survey System</h3>
+                        <p class="gallery-meta">Development &middot; HTML/Tailwind CSS/JavaScript/ASP.NET</p>
+                        <p class="gallery-description">Contributed to the development of a web-based survey system to collect and analyze customer feedback, resulting in improved service quality and customer retention.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="development">
+                    <a href="#dev2">
+                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Web-Based Student Tracking System</h3>
+                        <p class="gallery-meta">Development &middot; Python &middot; Flask/HTML5/CSS/JavaScript</p>
+                        <p class="gallery-description">Developed a comprehensive student tracking system to monitor academic performance and attendance.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="development">
+                    <a href="#dev3">
+                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Web-Based Appointment Management System</h3>
+                        <p class="gallery-meta">Development &middot; Python &middot; Flask/HTML5/Tailwind CSS/JavaScript</p>
+                        <p class="gallery-description">Contributed to the development of a comprehensive appointment management system to schedule and manage client appointments.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="development">
+                    <a href="#dev4">
+                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                    </a>
+                    <div class="gallery-info">
+                        <h3>Client-Based Marketing Website</h3>
+                        <p class="gallery-meta">Development &middot; HTML5/CSS/JavaScript</p>
+                        <p class="gallery-description">Developed a responsive marketing website for a client with modern design and user-friendly interface.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Lightbox modals -->
+            <div id="img1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject1.jpg" alt="Geometric drawing"></div>
+            <div id="img2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject2.jpg" alt="Typographic drawing"></div>
+            <div id="img3" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject3.jpg" alt="Pointilism drawing"></div>
+            <div id="img4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject4.jpg" alt="Tattoo drawing"></div>
+            <div id="img5" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/How To Play-Sheet.png" alt="Pixel art sheet"></div>
+            <div id="img6" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Map_Floor5.png" alt="Pixel map"></div>
+            <div id="img7" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Ramirez_Book_Cover_Activity.jpg" alt="Book cover"></div>
+            <div id="img8" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Ramirez_Grunge.jpg" alt="Grunge poster"></div>
+            <div id="img9" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Ramirez_Minimalist.jpg" alt="Minimalist poster"></div>
+            <div id="dev1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/project-image.png" alt="Web development project"></div>
+            <div id="dev2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/project-image.png" alt="Web development project"></div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- ABOUT SECTION -->
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <section id="about" class="about-section">
+            <div class="about-img-col">
+                <img src="static/images/kort.jpg" alt="Photo of Kurt Ramirez" class="about-img">
+            </div>
+
+            <div class="about-text-col">
+                <p class="about-eyebrow">About me</p>
+                <h1 class="about-heading">A passionate<br>IT student</h1>
+
+                <p class="about-body">
+                    Hi! I'm <strong>Kurt</strong>, a BSIT student at Pamantasan ng Lungsod ng Valenzuela.
+                    I have a passion for technology, coding, and design — and I'm always looking for ways
+                    to combine both.
+                </p>
+                <p class="about-body">
+                    On the technical side, I have a strong foundation in Java, MSSQL, HTML, and CSS,
+                    which lets me build and manage web applications and databases effectively.
+                </p>
+                <p class="about-body">
+                    On the creative side, I work with Adobe Illustrator, Photoshop, Figma, and Canva
+                    for graphic and UI design, and CapCut for video editing. This mix of coding and
+                    design lets me build things that are both functional and visually polished.
+                </p>
+                <p class="about-body">
+                    I'm always eager to learn, adapt, and grow in the ever-evolving tech industry.
+                </p>
+
+                <div class="about-cta">
+                    <h2 class="about-cta-heading">Come and work with me</h2>
+                    <a href="#contact" class="btn btn-primary">Get in touch</a>
+                    <a href="static/files/resume.pdf" download class="btn btn-outline">Download Resume</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="contact-header">
+                <p class="contact-eyebrow">Get In Touch</p>
+                <h1 class="contact-heading">Work With Me</h1>
+                <p class="contact-subtitle">Feel free to reach out through any of these channels</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-grid">
+
+                    <a href="https://facebook.com/kurt.ramirez06" target="_blank" class="contact-card facebook">
+                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        <h3>Facebook</h3>
+                        <p class="contact-link">facebook.com/kurt.ramirez06</p>
+                    </a>
+
+                    <a href="https://instagram.com/kort_ramirez" target="_blank" class="contact-card instagram">
+                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.63c-.794.297-1.473.645-2.148 1.32-.676.675-1.023 1.354-1.32 2.148-.297.788-.498 1.658-.56 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.062 1.278.263 2.148.56 2.936.297.794.645 1.473 1.32 2.148.675.676 1.354 1.023 2.148 1.32.788.297 1.658.498 2.936.56C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.278-.062 2.148-.263 2.936-.56.794-.297 1.473-.645 2.148-1.32.676-.675 1.023-1.354 1.32-2.148.297-.788.498-1.658.56-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.062-1.278-.263-2.148-.56-2.936-.297-.794-.645-1.473-1.32-2.148-.675-.676-1.354-1.023-2.148-1.32-.788-.297-1.658-.498-2.936-.56C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.07 1.171.054 1.805.244 2.227.408.56.217.96.477 1.382.896.419.42.679.822.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.56-.477.96-.896 1.382-.42.419-.822.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.56-.217-.96-.477-1.382-.896-.419-.42-.679-.822-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.56.477-.96.896-1.382.42-.419.822-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162s6.162-2.76 6.162-6.162c0-3.405-2.76-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm4.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z"/>
+                        </svg>
+                        <h3>Instagram</h3>
+                        <p class="contact-link">@kort_ramirez</p>
+                    </a>
+
+                    <a href="https://discord.com/users/minaricanno" target="_blank" class="contact-card discord">
+                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.942 5.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.586 11.586 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3 17.392 17.392 0 0 0-2.868 11.662 15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.638 10.638 0 0 1-1.706-.83c.143-.106.283-.217.418-.331a11.664 11.664 0 0 0 10.118 0c.137.114.277.225.418.331-.544.328-1.116.606-1.71.832a12.58 12.58 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM8.678 14.813a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.929 1.929 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                        </svg>
+                        <h3>Discord</h3>
+                        <p class="contact-link">minaricanno</p>
+                    </a>
+
+                    <a href="mailto:richardkurtramirez@gmail.com" class="contact-card email">
+                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <h3>Email</h3>
+                        <p class="contact-link">richardkurtramirez@gmail.com</p>
+                    </a>
+
+                    <a href="https://github.com/Sullyoona" target="_blank" class="contact-card github">
+                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <h3>GitHub</h3>
+                        <p class="contact-link">github.com/Sullyoona</p>
+                    </a>
+
+                    <a href="https://linkedin.com/in/richard-kurt-ramirez-02a14a372" target="_blank" class="contact-card linkedin">
+                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
+                            <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
+                        </svg>
+                        <h3>LinkedIn</h3>
+                        <p class="contact-link">linkedin.com/in/richard-kurt-ramirez-02a14a372</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <img src="static/images/logo_dark.png" alt="Kurt Ramirez logo" class="footer-logo">
+        <p>Kurt Ramirez &copy; 2025 · All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
