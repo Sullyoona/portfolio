@@ -62,6 +62,8 @@
                     <p>Figma</p>
                     <p class="skill-label">Graphic</p>
                     <p>Photoshop, Illustrator, Aseprite, Canva</p>
+                    <p class="skill-label">Video</p>
+                    <p>CapCut, DaVinci Resolve</p>
                 </div>
 
                 <div class="skill-card">
@@ -129,7 +131,7 @@
 
                 <article class="gallery-item" data-category="illustration" data-featured="true">
                     <a href="#img1">
-                        <img class="gallery-img" src="static/images/illustratorProject1.jpg" alt="Geometric drawing made in Illustrator">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/illustratorProject1.jpg') }}" alt="Geometric drawing made in Illustrator">
                     </a>
                     <div class="gallery-info">
                         <h3>Geometric Drawing</h3>
@@ -140,7 +142,7 @@
 
                 <article class="gallery-item" data-category="illustration">
                     <a href="#img2">
-                        <img class="gallery-img" src="static/images/illustratorProject2.jpg" alt="Typographic drawing made in Illustrator">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/illustratorProject2.jpg') }}" alt="Typographic drawing made in Illustrator">
                     </a>
                     <div class="gallery-info">
                         <h3>Typographic Drawing</h3>
@@ -151,7 +153,7 @@
 
                 <article class="gallery-item" data-category="illustration">
                     <a href="#img3">
-                        <img class="gallery-img" src="static/images/illustratorProject3.jpg" alt="Pointilism drawing made in Illustrator">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/illustratorProject3.jpg') }}" alt="Pointilism drawing made in Illustrator">
                     </a>
                     <div class="gallery-info">
                         <h3>Pointilism Drawing</h3>
@@ -162,7 +164,7 @@
 
                 <article class="gallery-item" data-category="illustration">
                     <a href="#img4">
-                        <img class="gallery-img" src="static/images/illustratorProject4.jpg" alt="Tattoo drawing made in Illustrator">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/illustratorProject4.jpg') }}" alt="Tattoo drawing made in Illustrator">
                     </a>
                     <div class="gallery-info">
                         <h3>Tattoo Drawing</h3>
@@ -173,7 +175,7 @@
 
                 <article class="gallery-item" data-category="pixel" data-featured="true">
                     <a href="#img5">
-                        <img class="gallery-img" src="static/images/How To Play-Sheet.png" alt="Pixel art sheet made in Aseprite">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/How To Play-Sheet.png') }}" alt="Pixel art sheet made in Aseprite">
                     </a>
                     <div class="gallery-info">
                         <h3>Pixel Art Sheet</h3>
@@ -184,7 +186,7 @@
 
                 <article class="gallery-item" data-category="pixel">
                     <a href="#img6">
-                        <img class="gallery-img" src="static/images/Map_Floor5.png" alt="Pixel map made in Aseprite">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/Map_Floor5.png') }}" alt="Pixel map made in Aseprite">
                     </a>
                     <div class="gallery-info">
                         <h3>Pixel Map</h3>
@@ -195,7 +197,7 @@
 
                 <article class="gallery-item" data-category="print" data-featured="true">
                     <a href="#img7">
-                        <img class="gallery-img" src="static/images/Ramirez_Book_Cover_Activity.jpg" alt="Book cover mock up made in Photoshop">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/Ramirez_Book_Cover_Activity.jpg') }}" alt="Book cover mock up made in Photoshop">
                     </a>
                     <div class="gallery-info">
                         <h3>Book Cover Mock Up</h3>
@@ -206,7 +208,7 @@
 
                 <article class="gallery-item" data-category="print">
                     <a href="#img8">
-                        <img class="gallery-img" src="static/images/Ramirez_Grunge.jpg" alt="Call for action poster made in Photoshop">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/Ramirez_Grunge.jpg') }}" alt="Call for action poster made in Photoshop">
                     </a>
                     <div class="gallery-info">
                         <h3>Call for Action Poster</h3>
@@ -217,7 +219,7 @@
 
                 <article class="gallery-item" data-category="print">
                     <a href="#img9">
-                        <img class="gallery-img" src="static/images/Ramirez_Minimalist.jpg" alt="Concert poster mock up made in Photoshop">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/Ramirez_Minimalist.jpg') }}" alt="Concert poster mock up made in Photoshop">
                     </a>
                     <div class="gallery-info">
                         <h3>Concert Poster Mock Up</h3>
@@ -227,7 +229,7 @@
                 </article>
 
                 <article class="gallery-item" data-category="motion" data-featured="true">
-                    <img class="gallery-img" src="static/videos/Ramirez-car-Act1.gif" alt="Car motion graphics made in Adobe Animate">
+                    <img class="gallery-img" src="{{ url_for('static', filename='videos/Ramirez-car-Act1.gif') }}" alt="Car motion graphics made in Adobe Animate">
                     <div class="gallery-info">
                         <h3>Car Motion Graphics</h3>
                         <p class="gallery-meta">Motion &middot; Adobe Animate</p>
@@ -236,7 +238,7 @@
                 </article>
 
                 <article class="gallery-item" data-category="motion">
-                    <img class="gallery-img" src="static/videos/text-animation-act4-5.gif" alt="Twice motion graphics made in Adobe Animate">
+                    <img class="gallery-img" src="{{ url_for('static', filename='videos/text-animation-act4-5.gif') }}" alt="Twice motion graphics made in Adobe Animate">
                     <div class="gallery-info">
                         <h3>Twice Motion Graphics</h3>
                         <p class="gallery-meta">Motion &middot; Adobe Animate</p>
@@ -245,7 +247,7 @@
                 </article>
 
                 <article class="gallery-item" data-category="motion">
-                    <img class="gallery-img" src="static/videos/text-animation-act4-4.gif" alt="Text motion graphics made in Adobe Animate">
+                    <img class="gallery-img" src="{{ url_for('static', filename='videos/text-animation-act4-4.gif') }}" alt="Text motion graphics made in Adobe Animate">
                     <div class="gallery-info">
                         <h3>Text Motion Graphics</h3>
                         <p class="gallery-meta">Motion &middot; Adobe Animate</p>
@@ -255,7 +257,7 @@
 
                 <article class="gallery-item" data-category="development" data-featured="true">
                     <a href="#dev1">
-                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/ValSurvey.png') }}" alt="Web development project">
                     </a>
                     <div class="gallery-info">
                         <h3>Web-Based Customer Satisfaction Survey System</h3>
@@ -266,7 +268,7 @@
 
                 <article class="gallery-item" data-category="development">
                     <a href="#dev2">
-                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/GradeGlazer.png') }}" alt="Web development project">
                     </a>
                     <div class="gallery-info">
                         <h3>Web-Based Student Tracking System</h3>
@@ -277,7 +279,7 @@
 
                 <article class="gallery-item" data-category="development">
                     <a href="#dev3">
-                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/JorgieDentalClinic.png') }}" alt="Web development project">
                     </a>
                     <div class="gallery-info">
                         <h3>Web-Based Appointment Management System</h3>
@@ -300,17 +302,19 @@
             </div>
 
             <!-- Lightbox modals -->
-            <div id="img1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject1.jpg" alt="Geometric drawing"></div>
-            <div id="img2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject2.jpg" alt="Typographic drawing"></div>
-            <div id="img3" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject3.jpg" alt="Pointilism drawing"></div>
-            <div id="img4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/illustratorProject4.jpg" alt="Tattoo drawing"></div>
-            <div id="img5" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/How To Play-Sheet.png" alt="Pixel art sheet"></div>
-            <div id="img6" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Map_Floor5.png" alt="Pixel map"></div>
-            <div id="img7" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Ramirez_Book_Cover_Activity.jpg" alt="Book cover"></div>
-            <div id="img8" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Ramirez_Grunge.jpg" alt="Grunge poster"></div>
-            <div id="img9" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/Ramirez_Minimalist.jpg" alt="Minimalist poster"></div>
-            <div id="dev1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/project-image.png" alt="Web development project"></div>
-            <div id="dev2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="static/images/project-image.png" alt="Web development project"></div>
+            <div id="img1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/illustratorProject1.jpg') }}" alt="Geometric drawing"></div>
+            <div id="img2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/illustratorProject2.jpg') }}" alt="Typographic drawing"></div>
+            <div id="img3" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/illustratorProject3.jpg') }}" alt="Pointilism drawing"></div>
+            <div id="img4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/illustratorProject4.jpg') }}" alt="Tattoo drawing"></div>
+            <div id="img5" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/How To Play-Sheet.png') }}" alt="Pixel art sheet"></div>
+            <div id="img6" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/Map_Floor5.png') }}" alt="Pixel map"></div>
+            <div id="img7" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/Ramirez_Book_Cover_Activity.jpg') }}" alt="Book cover"></div>
+            <div id="img8" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/Ramirez_Grunge.jpg') }}" alt="Grunge poster"></div>
+            <div id="img9" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/Ramirez_Minimalist.jpg') }}" alt="Minimalist poster"></div>
+            <div id="dev1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/ValSurvey.png') }}" alt="Web development project"></div>
+            <div id="dev2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/GradeGlazer.png') }}" alt="Web development project"></div>
+            <div id="dev3" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/JorgieDentalClinic.png') }}" alt="Web development project"></div>
+            <div id="dev4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/Project4.png') }}" alt="Web development project"></div>
         </section>
 
         <!-- ════════════════════════════════════════════════════════════════ -->
@@ -318,25 +322,27 @@
         <!-- ════════════════════════════════════════════════════════════════ -->
         <section id="about" class="about-section">
             <div class="about-img-col">
-                <img src="static/images/kort.jpg" alt="Photo of Kurt Ramirez" class="about-img">
+                <img src="{{ url_for('static', filename='images/kurt_photo.jpg') }}" alt="Photo of Kurt Ramirez" class="about-img">
             </div>
 
             <div class="about-text-col">
                 <p class="about-eyebrow">About me</p>
                 <h1 class="about-heading">A passionate<br>IT student</h1>
-
                 <p class="about-body">
                     Hi! I'm <strong>Kurt</strong>, a BSIT student at Pamantasan ng Lungsod ng Valenzuela.
                     I have a passion for technology, coding, and design — and I'm always looking for ways
                     to combine both.
                 </p>
                 <p class="about-body">
-                    On the technical side, I have a strong foundation in Java, MSSQL, HTML, and CSS,
+                    On the technical side, I have a strong foundation in Java, Python Flask, C# ASP.NET,
+                    HTML, Tailwind CSS, and is proficient in using tools like Visual Studio, VS Code,
+                    XAMPP, and SQL Server Management Studio,
                     which lets me build and manage web applications and databases effectively.
                 </p>
+
                 <p class="about-body">
-                    On the creative side, I work with Adobe Illustrator, Photoshop, Figma, and Canva
-                    for graphic and UI design, and CapCut for video editing. This mix of coding and
+                    On the creative side, I have used Adobe Illustrator, Photoshop, Figma, and Canva
+                    for graphic and UI design, CapCut and DaVinci Resolve for video editing. This mix of coding and
                     design lets me build things that are both functional and visually polished.
                 </p>
                 <p class="about-body">
@@ -346,9 +352,10 @@
                 <div class="about-cta">
                     <h2 class="about-cta-heading">Come and work with me</h2>
                     <a href="#contact" class="btn btn-primary">Get in touch</a>
-                    <a href="static/files/resume.pdf" download class="btn btn-outline">Download Resume</a>
+                    <a href="{{ url_for('static', filename='files/resume.pdf') }}" download class="btn btn-outline">Download Resume</a>
                 </div>
             </div>
+        </section>
         </section>
         <section id="contact" class="contact-section">
             <div class="contact-header">
@@ -416,10 +423,9 @@
     </main>
 
     <footer class="site-footer">
-        <img src="static/images/logo_dark.png" alt="Kurt Ramirez logo" class="footer-logo">
+        <img src="{{ url_for('static', filename='images/logo_dark.png') }}" alt="Kurt Ramirez logo" class="footer-logo">
         <p>Kurt Ramirez &copy; 2025 · All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
