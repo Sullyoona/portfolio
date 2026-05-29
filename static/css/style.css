@@ -545,7 +545,7 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -590,6 +590,78 @@ body {
     color: #6b7280;
     word-break: break-word;
 }
+
+/* ── CONTACT FORM ── */
+.contact-form-wrapper {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 40px;
+    margin-top: 48px;
+}
+
+.contact-form-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    color: #111;
+    background: #f9fafb;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1E3A8A;
+    background: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.contact-status {
+    font-size: 0.85rem;
+    min-height: 20px;
+}
+
+.contact-status.success { color: #16a34a; }
+.contact-status.error   { color: #dc2626; }
 
 /* ── FOOTER ── */
 .site-footer {
@@ -784,5 +856,9 @@ body {
 
     .contact-link {
         font-size: 0.8rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
     }
 }

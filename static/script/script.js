@@ -58,6 +58,121 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Resume request button functionality
+    const resumeBtn = document.getElementById('resumeBtn');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', function() {
+            const originalText = this.textContent;
+            this.disabled = true;
+            this.textContent = 'Sending...';
+
+            // Collect visitor information
+            const visitorData = {
+                name: prompt('Your name (optional):') || 'Anonymous',
+                email: prompt('Your email (optional):') || 'Not provided'
+            };
+
+            fetch('/request-resume', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(visitorData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    this.textContent = '✓ Request Sent!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.disabled = false;
+                    }, 2000);
+                } else {
+                    this.textContent = 'Error - Try again';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.disabled = false;
+                    }, 2000);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                this.textContent = 'Error - Try again';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.disabled = false;
+                }, 2000);
+            });
+        });
+    }
+
+// Contact form functionality
+    const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+
+    if (contactSubmitBtn) {
+        contactSubmitBtn.addEventListener('click', function () {
+
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+
+            const status = document.getElementById('contactStatus');
+
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                status.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+            // Disable button while sending
+            this.disabled = true;
+            this.textContent = 'Sending...';
+
+            fetch('/send-message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    subject,
+                    message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                if (data.success) {
+
+                    status.textContent = '✓ Message sent successfully!';
+
+                    // Clear form
+                    document.getElementById('contactName').value = '';
+                    document.getElementById('contactEmail').value = '';
+                    document.getElementById('contactSubject').value = '';
+                    document.getElementById('contactMessage').value = '';
+
+                } else {
+                    status.textContent = 'Failed to send message.';
+                }
+
+                this.disabled = false;
+                this.textContent = 'Send Message';
+            })
+            .catch(error => {
+                console.error(error);
+
+                status.textContent = 'Something went wrong.';
+
+                this.disabled = false;
+                this.textContent = 'Send Message';
+            });
+
+        });
+    }
+
     function updateNavActive(targetId) {
         navLinks.forEach(link => {
             link.classList.remove('active');
