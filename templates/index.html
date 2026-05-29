@@ -34,6 +34,9 @@
                     Richard Kurt<br>
                     <em>Ramirez</em>
                 </h1>
+                <div class="hero-img-wrapper">
+                    <img src="{{ url_for('static', filename='images/kurt_photo.jpg') }}" alt="Photo of Kurt Ramirez" class="hero-img">
+                </div>
                 <p class="hero-bio">
                     An aspiring IT professional with a passion for software development,
                     problem-solving, and building thoughtful digital experiences.
@@ -290,7 +293,7 @@
 
                 <article class="gallery-item" data-category="development">
                     <a href="#dev4">
-                        <img class="gallery-img" src="static/images/project-image.png" alt="Web development project">
+                        <img class="gallery-img" src="{{ url_for('static', filename='images/client-based.png') }}" alt="Web development project">
                     </a>
                     <div class="gallery-info">
                         <h3>Client-Based Marketing Website</h3>
@@ -314,20 +317,21 @@
             <div id="dev1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/ValSurvey.png') }}" alt="Web development project"></div>
             <div id="dev2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/GradeGlazer.png') }}" alt="Web development project"></div>
             <div id="dev3" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/JorgieDentalClinic.png') }}" alt="Web development project"></div>
-            <div id="dev4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/Project4.png') }}" alt="Web development project"></div>
+            <div id="dev4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/client-based.png') }}" alt="Web development project"></div>
         </section>
 
         <!-- ════════════════════════════════════════════════════════════════ -->
         <!-- ABOUT SECTION -->
         <!-- ════════════════════════════════════════════════════════════════ -->
         <section id="about" class="about-section">
-            <div class="about-img-col">
-                <img src="{{ url_for('static', filename='images/kurt_photo.jpg') }}" alt="Photo of Kurt Ramirez" class="about-img">
-            </div>
-
             <div class="about-text-col">
                 <p class="about-eyebrow">About me</p>
                 <h1 class="about-heading">A passionate<br>IT student</h1>
+
+                <div class="about-img-mobile">
+                    <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Photo of Kurt Ramirez" class="about-img">
+                </div>
+                
                 <p class="about-body">
                     Hi! I'm <strong>Kurt</strong>, a BSIT student at Pamantasan ng Lungsod ng Valenzuela.
                     I have a passion for technology, coding, and design — and I'm always looking for ways
@@ -355,7 +359,10 @@
                     <a href="{{ url_for('static', filename='files/resume.pdf') }}" download class="btn btn-outline">Download Resume</a>
                 </div>
             </div>
-        </section>
+
+            <div class="about-img-col">
+                <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Photo of Kurt Ramirez" class="about-img">
+            </div>
         </section>
         <section id="contact" class="contact-section">
             <div class="contact-header">
@@ -373,22 +380,6 @@
                         </svg>
                         <h3>Facebook</h3>
                         <p class="contact-link">facebook.com/kurt.ramirez06</p>
-                    </a>
-
-                    <a href="https://instagram.com/kort_ramirez" target="_blank" class="contact-card instagram">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.63c-.794.297-1.473.645-2.148 1.32-.676.675-1.023 1.354-1.32 2.148-.297.788-.498 1.658-.56 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.062 1.278.263 2.148.56 2.936.297.794.645 1.473 1.32 2.148.675.676 1.354 1.023 2.148 1.32.788.297 1.658.498 2.936.56C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.278-.062 2.148-.263 2.936-.56.794-.297 1.473-.645 2.148-1.32.676-.675 1.023-1.354 1.32-2.148.297-.788.498-1.658.56-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.062-1.278-.263-2.148-.56-2.936-.297-.794-.645-1.473-1.32-2.148-.675-.676-1.354-1.023-2.148-1.32-.788-.297-1.658-.498-2.936-.56C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.07 1.171.054 1.805.244 2.227.408.56.217.96.477 1.382.896.419.42.679.822.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.56-.477.96-.896 1.382-.42.419-.822.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.56-.217-.96-.477-1.382-.896-.419-.42-.679-.822-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.56.477-.96.896-1.382.42-.419.822-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162s6.162-2.76 6.162-6.162c0-3.405-2.76-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm4.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z"/>
-                        </svg>
-                        <h3>Instagram</h3>
-                        <p class="contact-link">@kort_ramirez</p>
-                    </a>
-
-                    <a href="https://discord.com/users/minaricanno" target="_blank" class="contact-card discord">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.942 5.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.586 11.586 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3 17.392 17.392 0 0 0-2.868 11.662 15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.638 10.638 0 0 1-1.706-.83c.143-.106.283-.217.418-.331a11.664 11.664 0 0 0 10.118 0c.137.114.277.225.418.331-.544.328-1.116.606-1.71.832a12.58 12.58 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM8.678 14.813a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.929 1.929 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                        </svg>
-                        <h3>Discord</h3>
-                        <p class="contact-link">minaricanno</p>
                     </a>
 
                     <a href="mailto:richardkurtramirez@gmail.com" class="contact-card email">
@@ -414,7 +405,7 @@
                             <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
                         </svg>
                         <h3>LinkedIn</h3>
-                        <p class="contact-link">linkedin.com/in/richard-kurt-ramirez-02a14a372</p>
+                        <p class="contact-link">linkedin.com/in/richard-kurt-ramirez</p>
                     </a>
 
                 </div>
