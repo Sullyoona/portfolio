@@ -61,17 +61,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Resume request button functionality
     const resumeBtn = document.getElementById('resumeBtn');
     if (resumeBtn) {
-        resumeBtn.addEventListener('click', function() {
+        resumeBtn.addEventListener('click', function () {
             const originalText = this.textContent;
+
+            // Ask for inputs
+            const name = prompt('Enter your name:');
+            const email = prompt('Enter your email:');
+
+            // Stop if user cancels
+            if (name === null || email === null) {
+                return;
+            }
+
+            // Remove extra spaces
+            const trimmedName = name.trim();
+            const trimmedEmail = email.trim();
+
+            // Validation
+            if (!trimmedName || !trimmedEmail) {
+                alert('Please fill in both name and email.');
+                return;
+            }
+
+            // Optional email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(trimmedEmail)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Disable button while sending
             this.disabled = true;
             this.textContent = 'Sending...';
-
-            // Collect visitor information
             const visitorData = {
-                name: prompt('Your name (optional):') || 'Anonymous',
-                email: prompt('Your email (optional):') || 'Not provided'
+                name: trimmedName,
+                email: trimmedEmail
             };
-
             fetch('/request-resume', {
                 method: 'POST',
                 headers: {
@@ -83,17 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 if (data.success) {
                     this.textContent = '✓ Request Sent!';
-                    setTimeout(() => {
-                        this.textContent = originalText;
-                        this.disabled = false;
-                    }, 2000);
                 } else {
                     this.textContent = 'Error - Try again';
-                    setTimeout(() => {
-                        this.textContent = originalText;
-                        this.disabled = false;
-                    }, 2000);
                 }
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.disabled = false;
+                }, 2000);
             })
             .catch(error => {
                 console.error('Error:', error);
