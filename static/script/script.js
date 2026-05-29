@@ -224,3 +224,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set initial active nav
     updateNavActive('#hero');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
