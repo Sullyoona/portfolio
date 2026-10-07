@@ -16,6 +16,7 @@
             <ul class="nav-link">
                 <li><a href="#hero" class="nav-link-item active">Home</a></li>
                 <li><a href="#gallery" class="nav-link-item">Gallery</a></li>
+                <li><a href="#internship" class="nav-link-item">Internship</a></li>
                 <li><a href="#about" class="nav-link-item">About</a></li>
                 <li><a href="#contact" class="nav-link-item">Contact</a></li>
             </ul>
@@ -86,29 +87,6 @@
                     <p>Technical Documentation, README Authoring</p>
                 </div>
             </div>
-        </section>
-
-        <!-- ════════════════════════════════════════════════════════════════ -->
-        <!-- RECENT WORKS SECTION -->
-        <!-- ════════════════════════════════════════════════════════════════ -->
-        <section class="recent-works">
-            <h2>Recent Works</h2>
-
-            <div class="works-grid">
-                <div class="work-item">
-                    <img src="static/images/illustratorProject1.jpg" alt="Geometric drawing made in Illustrator">
-                </div>
-                <div class="work-item">
-                    <img src="static/images/illustratorProject2.jpg" alt="Typographic drawing made in Illustrator">
-                </div>
-                <div class="work-item">
-                    <img src="static/images/illustratorProject3.jpg" alt="Pointilism drawing made in Illustrator">
-                </div>
-            </div>
-
-            <a href="#gallery" class="btn btn-outline">
-                See all works →
-            </a>
         </section>
 
         <!-- ════════════════════════════════════════════════════════════════ -->
@@ -303,6 +281,12 @@
 
             </div>
 
+            <div class="gallery-pagination" id="galleryPagination" aria-label="Gallery pagination">
+                <button class="pagination-btn" id="galleryPrev" type="button" aria-label="Previous page">Prev</button>
+                <div class="pagination-numbers" id="galleryPageNumbers"></div>
+                <button class="pagination-btn" id="galleryNext" type="button" aria-label="Next page">Next</button>
+            </div>
+
             <!-- Lightbox modals -->
             <div id="img1" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/illustratorProject1.jpg') }}" alt="Geometric drawing"></div>
             <div id="img2" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/illustratorProject2.jpg') }}" alt="Typographic drawing"></div>
@@ -318,6 +302,77 @@
             <div id="dev3" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/JorgieDentalClinic.png') }}" alt="Web development project"></div>
             <div id="dev4" class="modal"><a href="#" class="modal-close">&times;</a><img class="modal-img" src="{{ url_for('static', filename='images/client-based.png') }}" alt="Web development project"></div>
         </section>
+
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- INTERNSHIP SECTION -->
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <section id="internship" class="internship-section">
+
+            <div class="internship-header">
+                <p class="internship-eyebrow">Experience</p>
+                <h2 class="internship-heading">Internship</h2>
+            </div>
+
+            <div class="internship-card">
+
+                <!-- ── CAROUSEL ── -->
+                <div class="internship-carousel">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+
+                    <div class="carousel-track-wrap">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Add/remove <div class="carousel-slide"> blocks as needed -->
+                            <div class="carousel-slide">
+                                <img
+                                    src="{{ url_for('static', filename='images/DA_OJT1.jpg') }}"
+                                    alt="Internship photo 1"
+                                    class="carousel-img internship-lightbox-trigger">
+                            </div>
+                            <div class="carousel-slide">
+                                <img
+                                    src="{{ url_for('static', filename='images/DA_OJT2.jpg') }}"
+                                    alt="Internship photo 2"
+                                    class="carousel-img internship-lightbox-trigger">
+                            </div>
+                            <div class="carousel-slide">
+                                <img
+                                    src="{{ url_for('static', filename='images/DA_OJT3.jpg') }}"
+                                    alt="Internship photo 3"
+                                    class="carousel-img internship-lightbox-trigger">
+                            </div>
+                            <div class="carousel-slide">
+                                <img
+                                    src="{{ url_for('static', filename='images/DA_OJT4.jpg') }}"
+                                    alt="Internship photo 4"
+                                    class="carousel-img internship-lightbox-trigger">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+
+                    <!-- Dots -->
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+
+                <!-- ── BODY ── -->
+                <div class="internship-body">
+                    <p class="internship-company">Department of Agriculture - ICTS NOMD</p>
+                    <h3 class="internship-role">IT Support Assistant</h3>
+                    <p class="internship-desc">
+                        During my internship at the Department of Agriculture, I gained hands-on experience in IT support especially in troubleshooting hardware and software issues, assisting with network configurations, and providing technical support to end-users.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ── INTERNSHIP LIGHTBOX ── -->
+        <div id="internshipLightbox" class="internship-lightbox" aria-hidden="true">
+            <button class="internship-lightbox-close" id="internshipLightboxClose" aria-label="Close">&times;</button>
+            <img src="" alt="" class="internship-lightbox-img" id="internshipLightboxImg">
+        </div>
 
         <!-- ════════════════════════════════════════════════════════════════ -->
         <!-- ABOUT SECTION -->
